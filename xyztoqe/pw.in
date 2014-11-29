@@ -1,10 +1,10 @@
 &CONTROL
-  calculation  = "relax",
+  calculation  = "scf",
   prefix       = "0prefix0",
   pseudo_dir   = "./",
   outdir       = "./out",
 ! forc_conv_thr= 1.0D-3,
-  wf_collect   = .TRUE.
+! wf_collect   = .TRUE.
 ! restart_mode = 'restart',
 ! verbosity    = 'high',
 ! disk_io      = 'none'
@@ -15,7 +15,7 @@
   nat       = 0nat0,
   ntyp      = 0ntyp0,
   ecutwfc   = 60,
-!  ecutrho   = 300,
+! ecutrho   = 300,
   nbnd      = 406,
 ! tot_charge = -1,
   nspin     = 2,
@@ -25,6 +25,10 @@
 ! degauss     = 0.01D0,
 ! tot_charge  = -1,
   assume_isolated = 'makov-payne',
+! edir = 1
+! emaxpos = 0.9
+! eopreg = 0.1
+! eamp = 0.001
 /
 &ELECTRONS
   conv_thr    = 1.D-8,
