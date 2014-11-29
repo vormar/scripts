@@ -1,0 +1,14 @@
+&lr_input
+prefix='0prefix0',
+outdir='./out',
+restart_step=250,
+! restart=.true.
+/
+&lr_control
+itermax=500,
+ipol=4
+/
+$lr_post
+w_T_npol=3,
+epsil=0.005
+/

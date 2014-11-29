@@ -1,0 +1,14 @@
+&INPUTPP
+prefix = '0prefix0'
+outdir = './out'
+filplot = 'k1band88'
+plot_num = 7
+kband = 88  
+kpoint = 1
+lsign = .TRUE.
+/
+&PLOT
+iflag = 3
+output_format = 6
+fileout = 'k1band88.cube'
+/

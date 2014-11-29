@@ -1,0 +1,40 @@
+&CONTROL
+  calculation  = "relax",
+  prefix       = "0prefix0",
+  pseudo_dir   = "./",
+  outdir       = "./out",
+  forc_conv_thr= 1.0D-3,
+  wf_collect   = .TRUE.
+! restart_mode = 'restart',
+! verbosity    = 'high',
+  disk_io      = 'none'
+/
+&SYSTEM
+  ibrav     = 0, 
+  nat       = 0nat0,
+  ntyp      = 0ntyp0,
+  ecutwfc   = 30,
+  ecutrho   = 300,
+  nbnd      = 155,
+! tot_charge = -1,
+  nspin     = 2,
+  tot_magnetization = 1
+! occupations = "smearing",
+! smearing    = "fd",
+! degauss     = 0.01D0,
+! assume_isolated = 'makov-payne',
+/
+&ELECTRONS
+  conv_thr    = 1.D-7,
+  mixing_beta = 0.50,
+/
+&IONS
+/
+&CELL
+/
+K_POINTS {Gamma}
+CELL_PARAMETERS angstrom
+0boxsize0  0.0  0.0
+ 0.0 0boxsize0  0.0
+ 0.0  0.0 0boxsize0 
+ATOMIC_SPECIES

@@ -1,0 +1,7 @@
+&dos
+ prefix = '0prefix0',
+ outdir = './out',
+ ngauss = 0,
+ degauss = 0.0100,
+ Emin   = -22.0, Emax   = 0, DeltaE = 0.05,  
+/

@@ -1,0 +1,12 @@
+&lr_input
+  prefix='0prefix0',
+  outdir='./out',
+  itermax=10000
+  itermax0=1000
+  extrapolation="osc"
+  epsil=0.005
+  end=2.50d0
+  increment=0.001d0
+  start=0.0d0
+  ipol=4
+/

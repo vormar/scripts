@@ -1,0 +1,22 @@
+#!/bin/bash
+#  small  -  1- 4 nodes, 24 hr walltime limit
+#  medium -  5-16 nodes, 12 hr walltime limit
+#  large  - 17-32 nodes,  6 hr walltime limit
+
+#PBS -l nodes=16:ppn=8
+#PBS -l walltime=12:00:00
+#PBS -j oe
+#PBS -N 0prefix0 
+#PBS -M npbrawand@ucdavis.edu
+
+cd "${PBS_O_WORKDIR}";
+
+# You can use this to add the system default version of 
+# quantum-espresso to the path (has the pw.x binary)
+#module load quantum-espresso/5.0.2-intel12-ompi143 
+#module load quantum-espresso/5.0-intel12-ompi143
+
+# Assuming openmpi is used, the number of processors is detected automatically
+mpirun /home/nbrawand/src/espresso-5.0.2/bin/pw.x < pw.in >& pw.out
+#mpirun /home/nbrawand/src/espresso-5.0.2/bin/turbo_lanczos.x < tl.in >& tl.out
+#mpirun /home/nbrawand/src/espresso-5.0.2/bin/turbo_spectrum.x < ts.in >& ts.out
