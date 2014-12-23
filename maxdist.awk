@@ -25,7 +25,9 @@ BEGIN{
     }
   }
   print ""
-  print maxd
+  print "assume input is in angs"
+  print "bohr: " maxd * 1.8897161646320724
+  print "ang: " maxd
   print ""
 
 }
