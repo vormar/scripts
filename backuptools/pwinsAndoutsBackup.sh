@@ -15,8 +15,10 @@ shopt -s extglob
 # looking for all files ending with .in and .out to tar 
 find ~/!(src) -name *.in > ${mydir}/tmpfilelist
 find ~/!(src) -name *.out >> ${mydir}/tmpfilelist
+find ~/!(src) -name run* >> ${mydir}/tmpfilelist
 find ${SCRATCH} -name *.in >> ${mydir}/tmpfilelist
 find ${SCRATCH} -name *.out >> ${mydir}/tmpfilelist
+find ${SCRATCH} -name run* >> ${mydir}/tmpfilelist
 
 
 # creating file structure to tar up
