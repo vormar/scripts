@@ -3,8 +3,8 @@
   prefix       = "0prefix0",
   pseudo_dir   = "./",
   outdir       = "./out",
+  wf_collect   = .TRUE.
 ! forc_conv_thr= 1.0D-3,
-! wf_collect   = .TRUE.
 ! restart_mode = 'restart',
 ! verbosity    = 'high',
 ! disk_io      = 'none'
@@ -14,25 +14,30 @@
   a         = 0boxsize0,
   nat       = 0nat0,
   ntyp      = 0ntyp0,
-  ecutwfc   = 60,
+  ecutwfc   = 85,
 ! ecutrho   = 300,
-  nbnd      = 406,
+  assume_isolated = 'mp',
+  nosym=.true.
+  input_dft='PBE0'
+  exx_fraction=0.00
+! ecutfock = 25
+! nbnd      = 406,
 ! tot_charge = -1,
-  nspin     = 2,
-  tot_magnetization = 1
+! nspin     = 2,
+! tot_magnetization = 1
 ! occupations = "smearing",
 ! smearing    = "fd",
 ! degauss     = 0.01D0,
 ! tot_charge  = -1,
-  assume_isolated = 'makov-payne',
 ! edir = 1
 ! emaxpos = 0.9
 ! eopreg = 0.1
 ! eamp = 0.001
 /
 &ELECTRONS
-  conv_thr    = 1.D-8,
-  mixing_beta = 0.50,
+  conv_thr    = 1.D-10,
+  diago_full_acc = .true.
+!  mixing_beta = 0.50,
 /
 &IONS
 /
