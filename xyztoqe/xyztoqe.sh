@@ -54,7 +54,7 @@ do
  fi
 done < xyztoqetmp2.txt
 
-sed -i "s/0boxsize0/$(($((${sizeofsystem%%.*}*2))+7)).0/g" $sysname/pw.in
+sed -i "s/0boxsize0/$(($((${sizeofsystem%%.*}*2))+12)).0/g" $sysname/pw.in
 
 #remove tmp files
 rm xyztoqetmp.txt 
