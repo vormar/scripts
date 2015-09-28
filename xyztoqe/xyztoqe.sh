@@ -29,7 +29,7 @@ do
  mass=`awk "/$line /{print}" $scrptdir/atomlist/list` 
  pp=`ls $scrptdir/pseudopots/*$line*`
 #copy *UPF files
- cp $scrptdir/pseudopots/*$line* $sysname
+ cp $scrptdir/pseudopots/*"$line."* $sysname
  echo $mass" "${pp##*/} >> $sysname/pw.in
 done < xyztoqetmp.txt
 
