@@ -100,7 +100,7 @@ cp $scrptdir/runqe $sysname
 while read line 
 do
  mass=`awk "/$line /{print}" $scrptdir/atomlist/list` 
- pp=`ls $scrptdir/pseudopots/*$line*`
+ pp=`ls $scrptdir/pseudopots/*$line.*`
 #copy *UPF files
 #cp $scrptdir/pseudopots/*"$line."* $sysname
  echo $mass" "${pp##*/} >> $sysname/pw.in
