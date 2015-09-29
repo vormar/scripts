@@ -4,7 +4,7 @@
 
 #vars
 xyzfil=$1
-mydir=`pwd`
+mydir=$(cd `dirname $0` && pwd)
 ppdir="$mydir/pseudopots"
 etot=0
 
@@ -36,7 +36,8 @@ do
   then
     getz
     etot=$(($etot + $atomz))
-    echo $etot
   fi
 
 done < $xyzfil
+
+echo $etot

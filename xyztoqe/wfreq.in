@@ -6,20 +6,21 @@
 /
 &WSTAT_CONTROL
   wstat_calculation='S'
-  n_pdep_eigen=400
+  n_pdep_eigen=0numeps0
 !  tr2_dfpt=1.d-8
 !  l_minimize_exx_if_active=.true.
 !  trev_pdep = 1.D-2
 /
 &WFREQ_CONTROL
   wfreq_calculation="XWGQ"
-  n_pdep_eigen_to_use=400
-  qp_bandrange(1)=15
-  qp_bandrange(2)=16
+  n_pdep_eigen_to_use=0numeps0
+  qp_bandrange(1)=0numhomo0
+  qp_bandrange(2)=0numlumo0
   macropol_calculation="N"
   n_lanczos=30
   n_imfreq=1024
   n_refreq=328
   ecut_imfreq=200
   ecut_refreq=1
+  n_secant_maxiter=7
 /

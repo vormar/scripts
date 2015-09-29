@@ -1,0 +1,14 @@
+
+
+&INPUT_WEST
+  qe_prefix="0prefix0"
+  west_prefix="scf"
+  outdir="./out"
+/
+&WSTAT_CONTROL
+  wstat_calculation='S'
+  n_pdep_eigen=0numeps0
+!  tr2_dfpt=1.d-8
+!  l_minimize_exx_if_active=.true.
+!  trev_pdep = 1.D-2
+/

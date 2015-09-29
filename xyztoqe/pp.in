@@ -1,14 +1,14 @@
 &INPUTPP
 prefix = '0prefix0'
 outdir = './out'
-filplot = 'k1band88'
+filplot = 'homo'
 plot_num = 7
-kband = 88  
+kband = 0numhomo0 
 kpoint = 1
 lsign = .TRUE.
 /
 &PLOT
 iflag = 3
 output_format = 6
-fileout = 'k1band88.cube'
+fileout = 'homo.cube'
 /

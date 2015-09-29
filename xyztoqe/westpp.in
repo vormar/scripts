@@ -6,7 +6,7 @@
 /
 &wstat_control
   wstat_calculation='S'
-  n_pdep_eigen=350
+  n_pdep_eigen=0numeps0
 !  tr2_dfpt=1.d-8
 !  l_minimize_exx_if_active=.true.
 !  trev_pdep = 1.D-2
@@ -14,6 +14,6 @@
 &westpp_control
   westpp_calculation="s"
   westpp_bandrange(1)=1
-  westpp_bandrange(2)=350
+  westpp_bandrange(2)=0numeps0
   sec_verb =.true.
 /
