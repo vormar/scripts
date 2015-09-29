@@ -35,6 +35,12 @@ else:
 END
 }
 
+ttwo(){
+python - <<END
+print $1*2
+END
+}
+
 getsize(){
 python - <<END
 f=open('$1','r')
@@ -81,6 +87,7 @@ numbnd=$(getnumbnd $numhomo)
 numeps=$(getnumeps $numhomo)
 numlumo=$(addone $numhomo)
 sizeofsystem=$(getsize $1)
+numbndtwo=$(ttwo $numbnd)
 
 #create new dir for qe input files
 mkdir $sysname
@@ -105,6 +112,7 @@ sed -i "s/0nat0/$numatoms/g" $sysname/*.in
 sed -i "s/0ntyp0/$numatomtyps/g" $sysname/*.in
 sed -i "s/0numelec0/$numelec/g" $sysname/*.in
 sed -i "s/0numbnd0/$numbnd/g" $sysname/*.in
+sed -i "s/0numbndtwo0/$numbndtwo/g" $sysname/*.in
 sed -i "s/0numhomo0/$numhomo/g" $sysname/*.in
 sed -i "s/0numlumo0/$numlumo/g" $sysname/*.in
 sed -i "s/0numeps0/$numeps/g" $sysname/*.in

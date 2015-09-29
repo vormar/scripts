@@ -1,0 +1,27 @@
+&lr_input
+    prefix='0prefix0',
+    outdir='./out',
+!   restart=.true.
+!   max_seconds=82800
+!   lr_verbosity=1
+/
+&lr_dav
+    num_eign=10
+    num_init=20
+    num_basis_max=100
+    residue_conv_thr=1.0E-4
+    start=0.0
+    finish=0.7
+    step=0.0002
+    broadening=0.005
+!   p_nbnd_occ=20
+!   p_nbnd_virt=20
+    d0psi_rs=.true.
+    lplot_drho = .true.
+    lshift_d0psi=.true.
+!   if_dft_spectrum=.true.
+!   ecutfock = 100.0
+!   reference=0.5
+!   poor_of_ram=.false.
+!   poor_of_ram2=.false.
+/

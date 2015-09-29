@@ -9,5 +9,6 @@
 cd $PBS_O_WORKDIR
 module load espresso/5.1
 
-aprun -n 144  pw.x < pw.in >& pw.out
-aprun -n 144  pp.x < pp.in >& pp.out
+aprun -n 144 pw.x < pw.in >& pw.out
+#aprun -n 144 pp.x < pp.in >& pp.out
+#aprun -n 144 turbo_davidson.x < dtddft.in >& dtddft.out
